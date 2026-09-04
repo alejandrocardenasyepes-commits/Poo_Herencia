@@ -1,4 +1,4 @@
-﻿namespace GeometricFigures.Backend;
+﻿namespace GeometricFigures.Backend; 
 
 public class parallelogram : rectangle
 {
@@ -11,6 +11,7 @@ public class parallelogram : rectangle
 
     public parallelogram(string name, double a, double b, double h) : base(name, a, b)
     {
+        validateH(h);
         H = h;
     }
 
@@ -21,9 +22,28 @@ public class parallelogram : rectangle
 
     //methonds public 
 
+    public override double Getperimeter()
+    {
+        return 2 * (A + B);
+    }
 
+    public override double GetArea()
+    {
+        return B * H;
+    }
 
     //methonds private 
 
+    private void validateH(double h)
+    {
 
+        if (h <= 0)
+
+        {
+            throw new ArgumentException("the h field must be greater than zero.", nameof(h)); 
+
+        }
+
+
+    }
 }
