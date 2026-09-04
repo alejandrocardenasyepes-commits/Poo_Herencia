@@ -12,6 +12,7 @@ public class Square : GeometricFigure
 
     public Square(string name, double a) : base(name)
     {
+        validateA(a);
         A = a;
     }
 

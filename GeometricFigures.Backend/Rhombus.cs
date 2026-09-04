@@ -13,8 +13,8 @@ public class Rhombus : Square
 
     public Rhombus(string name, double a, double d1, double d2) : base(name, a)
     {
-        _d1 = D1;
-        _d2 = D2;
+        D1 = d1;
+        D2 = d2;
 
     }
 
@@ -26,7 +26,32 @@ public class Rhombus : Square
     //methonds public
 
 
+    public override double Getperimeter()
+    {
+        return A * 4;
+    }
+
+    public override double GetArea()
+    {
+        return (D1 * D2) / 2;
+    }
 
 
     //methonds private 
+
+    private void validateD1(double d1)
+    {
+        if (d1 <= 0) 
+        {
+            throw new ArgumentException("the diagonal 1 must be greater than zero.");
+        }
+    }
+
+    private void validateD2(double d2)
+    {
+        if (d2 <= 0)
+            {
+            throw new ArgumentException("the diagonal 2 must be greater than zero.");
+            }
+    }
 }
