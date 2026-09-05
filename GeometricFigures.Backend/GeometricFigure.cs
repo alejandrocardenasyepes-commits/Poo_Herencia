@@ -15,14 +15,14 @@ public abstract class GeometricFigure
 //methonds public
 public GeometricFigure(string name)
 {
-name = name;
+Name = name;
 }
 public abstract double GetArea();
-public abstract double Getperimeter();
+public abstract double GetPerimeter();
 
     public override string ToString()
     {
-        return $"{Name,-15} => area...: {GetArea(),12:N5}  perimeter: {Getperimeter(),12:N5}";
+        return $"{Name,-15} => Area.....: {GetArea():N5}  perimeter: {GetPerimeter():N5}";
     }
 
 

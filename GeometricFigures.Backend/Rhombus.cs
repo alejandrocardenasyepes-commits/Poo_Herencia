@@ -13,6 +13,7 @@ public class Rhombus : Square
 
     public Rhombus(string name, double a, double d1, double d2) : base(name, a)
     {
+        
         D1 = d1;
         D2 = d2;
 
@@ -26,7 +27,7 @@ public class Rhombus : Square
     //methonds public
 
 
-    public override double Getperimeter()
+    public override double GetPerimeter()
     {
         return A * 4;
     }

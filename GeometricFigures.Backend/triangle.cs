@@ -1,6 +1,6 @@
 ﻿namespace GeometricFigures.Backend;
 
-public class triangle : rectangle
+public class Triangle : rectangle
 {
 
     //fields 
@@ -10,7 +10,7 @@ public class triangle : rectangle
 
     //constructor
 
-    public triangle(string name, double a, double b, double c, double h) : base(name, a, b)
+    public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
     { 
         validateH(h);
         validateC(c);
@@ -29,7 +29,7 @@ public class triangle : rectangle
 
     //methonds public 
 
-    public override double Getperimeter()
+    public override double GetPerimeter()
     {
         return A + B + C;
     }

@@ -10,8 +10,9 @@ public class circle : GeometricFigure
 
     //constructor
 
-    public circle(double r) : base("circle")
+    public circle(double r, string name) : base("circle")
     {
+        validateR(r);
         R = r;
     }
 
@@ -28,7 +29,7 @@ public class circle : GeometricFigure
         return Math.PI * R * R;
     }
 
-    public override double Getperimeter()
+    public override double GetPerimeter()
     {
         return 2 * Math.PI * R;
     }

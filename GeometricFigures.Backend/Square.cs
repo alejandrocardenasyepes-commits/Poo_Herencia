@@ -28,7 +28,7 @@ public class Square : GeometricFigure
         return A * A;
     }
 
-    public override double Getperimeter()
+    public override double GetPerimeter()
     {
         return A * 4;
     }
